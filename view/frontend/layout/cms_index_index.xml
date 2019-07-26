@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd" design_abstraction="custom">
+    <body>
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="first_test_component" template="Fisha_Test::first_form.phtml"/>
+            <block class="Magento\Framework\View\Element\Template" name="third_test_component" template="Fisha_Test::third_form.phtml">
+                <arguments>
+                    <argument name="jsLayout" xsi:type="array">
+                        <item name="components" xsi:type="array">
+                            <item name="third-form" xsi:type="array">
+                                <item name="component" xsi:type="string">Fisha_Test/js/third-form</item>
+                                <item name="config" xsi:type="array">
+                                    <item name="template" xsi:type="string">Fisha_Test/third-form</item>
+                                    <item name="url" xsi:type="string">test-url</item>
+                                </item>
+                            </item>
+                        </item>
+                    </argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

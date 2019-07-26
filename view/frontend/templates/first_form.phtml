@@ -1,0 +1,30 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+?>
+<div class="first-form" data-bind="scope: 'first-form'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<div class="second-form" data-bind="scope: 'second-form'" data-mage-init='{
+    "Magento_Ui/js/core/app":{"components":{"second-form":{"component": "Fisha_Test/js/second-form"}}}
+    }'>
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+
+<script type="text/x-magento-init">
+{
+    ".first-form": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "first-form": {
+                    "component": "Fisha_Test/js/first-form",
+                    "config": {
+                        "url": "<?= /* @escapeNotVerified */ $block->getUrl('test/test/delete') ?>",
+                        "template": "Fisha_Test/first-form"
+                    }
+                }
+            }
+        }
+    }
+}
+</script>
